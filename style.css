@@ -1,0 +1,146 @@
+body {
+  font-family: "Your Main Font", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    45deg,
+    hsl(340, 75%, 80%),
+    hsl(200, 75%, 80%),
+    hsl(45, 75%, 80%),
+    hsl(120, 75%, 80%),
+    hsl(280, 75%, 80%),
+    hsl(210, 75%, 80%),
+    hsl(55, 75%, 80%)
+  );
+  background-size: 600% 600%;
+  animation: breathingGradientAnimation 40s infinite alternate;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 5px solid #635f67;
+  float: left;
+  margin-left: 30px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-out 0.5s;
+  animation: fadeInAndScale 1s ease-out forwards 0.5s;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+h1,
+.subtitle,
+h2 {
+  color: #000;
+  font-family: "Dancing Script", cursive, sans-serif;
+  font-size: 2.5em;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInUp 1s ease-out forwards 0.5s;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  margin: 5px 0;
+}
+
+h2,
+p {
+  font-size: 1.2em;
+  margin: 5px 0;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease-out forwards 1s;
+}
+
+.about-section p {
+  line-height: 1.6;
+  font-family: "Your Thin Font", sans-serif; /* Add your desired thin font family */
+  color: #282626; /* Light grey color */
+  font-weight: lighter;
+}
+
+.contact-section p {
+  margin: 0;
+}
+
+.contact-section a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.trailhead-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 0px;
+}
+
+@keyframes breathingGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInAndScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
