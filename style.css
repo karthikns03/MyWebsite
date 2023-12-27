@@ -78,9 +78,18 @@ p {
 
 .about-section p {
   line-height: 1.6;
-  font-family: "Your Thin Font", sans-serif; /* Add your desired thin font family */
-  color: #282626; /* Light grey color */
+  font-family: "Your Thin Font", sans-serif;
+  color: #282626;
   font-weight: lighter;
+}
+
+.contact-section {
+  filter: brightness(1);
+  transition: filter 0.3s ease-in-out;
+}
+
+.contact-section:hover {
+  filter: brightness(1.2) saturate(200%) hue-rotate(200deg);
 }
 
 .contact-section p {
@@ -91,19 +100,28 @@ p {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  margin-right: 0px;
+  margin-right: 10px; /* Adjust the margin for equal spacing */
   display: inline-block;
   vertical-align: middle;
+  transition: color 0.3s ease-in-out;
 }
 
 .contact-section a:hover {
   text-decoration: underline;
+  color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 .trailhead-icon {
   width: 50px;
   height: 50px;
   margin-top: 0px;
+  filter: brightness(1);
+  transition: filter 0.3s ease-in-out;
+}
+
+.contact-section a:hover .trailhead-icon {
+  filter: brightness(1.5);
 }
 
 @keyframes breathingGradientAnimation {
